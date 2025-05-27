@@ -6,7 +6,7 @@ const Whatwedo = () => {
     <motion.div
     initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      transition={{ duration: 0.6 ease: 'easeOut' }}
       viewport={{ amount: 0.3 }} // triggers when 30% visible 
     className=' mb-10 '>
     <div className=' flex flex-col items-center mt-20'>

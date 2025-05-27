@@ -17,7 +17,7 @@ const HowItWorks = () => {
     <motion.div 
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ amount: 0.3 }} // animate every time it scrolls into view
     className='c1 mr-[15vw] mt-10 flex justify-center  items-center gap-7 rounded-3xl p-4 bg-[#ddecfb] shadow-lg  m-4 md:w-[40vw]'>
       <div>
@@ -33,7 +33,7 @@ const HowItWorks = () => {
     <motion.div
       initial={{ opacity: 0, x: 50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ amount: 0.3 }} // animate every time it scrolls into view
     className='c2 mt-10 ml-[15vw] flex justify-center items-center gap-7 rounded-3xl p-4 bg-[#ddecfb] md:w-[40vw]  m-4'>
       <div>
@@ -49,7 +49,7 @@ const HowItWorks = () => {
     <motion.div
     initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      transition={{ duration: 0.6, ease: 'easeOut' }}
       viewport={{ amount: 0.3 }} // animate every time it scrolls into view
      className='c3 mr-[15vw] mt-10 flex justify-center items-center gap-7 rounded-3xl p-4 bg-[#ddecfb] md:w-[40vw] m-4'>
       <div>
