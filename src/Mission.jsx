@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from "motion/react"
 
 const Mission = () => {
   return (
@@ -17,9 +18,15 @@ const Mission = () => {
     </div>
     </div>
 
-    <div className='cardHolder md:flex justify-center mb-10'>
+    <motion.div 
+    initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      viewport={{ amount: 0.3 }} // triggers only once when 30% visible 
+    className='cardHolder md:flex justify-center mb-10'>
 
-    <div className='card1 md:w-[25vw] m-8 p-2 bg-slate-50  rounded-xl shadow-xl shadow-blue-300 text-center mt-10 '>
+    <motion.div
+     className='card1 md:w-[25vw] m-8 p-2 bg-slate-50  rounded-xl shadow-xl shadow-blue-300 text-center mt-10 '>
     <div className=' m-5 flex justify-center gap-16 text-4xl'>
         <div>
              <i className="ri-line-chart-fill text-blue-400"></i>
@@ -27,7 +34,7 @@ const Mission = () => {
         </div>
         <h1 className=' my-4 text-[#06063a] text-xl font-semibold'>Data Driven</h1>
         <p className=' mb-4'>Fund recurring growth expenses eg. customer acquisition, inventory</p>
-    </div>
+    </motion.div>
 
 
     <div className='card2 md:w-[25vw]  m-8 p-2 bg-slate-50  rounded-xl shadow-xl shadow-blue-300 text-center mt-10 '>
@@ -50,7 +57,7 @@ const Mission = () => {
         <h1 className=' my-4 text-[#06063a] text-xl font-semibold'>Value Accelerating</h1>
         <p className=' mb-4'>Fund recurring growth expenses eg. customer acquisition, inventory</p>
     </div>
-    </div>
+    </motion.div>
 
 
     </div>

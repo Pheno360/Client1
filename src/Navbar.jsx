@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
+import UpGlow from './assets/UpGlow.jpg'
 
 const Navbar = () => {
   const[menu,setMenu]=useState(true)
 
 
-  return (
-  <div>
 
-  <div className={`md:hidden absolute w-full h-screen ${menu?'translate-x-[100%]':''} transition-all bg-white p-8 text-2xl`}>
+  return (
+  <div className=' overflow-x-hidden'>
+
+  <div className={`md:hidden  fixed top-0 left-0 z-50 w-full h-screen ${menu?'translate-x-full':'translate-x-0'} transition-all bg-white p-8 text-2xl`}>
          <div className='Open-menu flex justify-end '>
          <i onClick={()=> setMenu(!menu)} className="ri-close-large-line"></i>
          </div>
@@ -46,10 +48,12 @@ const Navbar = () => {
          <i class="ri-mail-line text-slate-600"></i>
          </div>
     </div>
+
+
     <div className='flex justify-between p-4 md:px-12'>
         <div className='logo'>
-            <i className="ri-building-3-fill text-2xl px-5"></i>
-            <h1 className=' font-[400] text-sm '>Company</h1>
+            <img className=' md:h-12 h-8 md:w-32 w-20' src={UpGlow} alt="" />
+            
         </div>
 
         <div className='menu-icon md:hidden flex items-center'>
@@ -57,11 +61,11 @@ const Navbar = () => {
         </div>
 
         <div className=' nav-menus hidden md:flex gap-6 px-14 items-center '>
-          <h1>What We Do</h1>
-          <h1>How it Works </h1>
-          <h1>Who we invest in </h1>
-          <h1>Testimonials</h1>
-          <h1 className=' py-3 px-4 text-white font-bold bg-green-500 rounded-full'>Contact Us</h1>
+          <h1 className=' cursor-pointer' onClick={()=>window.scrollTo({top:700,behavior:'smooth'})}>What We Do</h1>
+          <h1 className=' cursor-pointer' onClick={()=>window.scrollTo({top:1500,behavior:'smooth'})}>About Us </h1>
+          <h1 className=' cursor-pointer' onClick={()=>window.scrollTo({top:2000,behavior:'smooth'})}>How it Works </h1>
+          <h1 className=' cursor-pointer' onClick={()=>window.scrollTo({top:2500,behavior:'smooth'})}>Testimonials</h1>
+          <h1  onClick={()=>window.scrollTo({top:document.body.scrollHeight,behavior:'smooth'})} className=' py-3 px-4 text-white font-bold bg-green-500 rounded-full cursor-pointer'>Contact Us</h1>
         </div>
     </div>
 

@@ -9,8 +9,8 @@ import Whatwedo from './Whatwedo'
 function App() {
 
   return (
-    <>
-    <div className='font-semibold'>
+    <div className=' overflow-x-hidden'>
+    <div className='font-semibold overflow-x-hidden'>
      <Navbar />
      </div>
      <Hero />
@@ -18,7 +18,7 @@ function App() {
      <Mission />
      <HowItWorks />
      <Footer />
-    </>
+    </div>
 
   )
 }

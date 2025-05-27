@@ -1,6 +1,7 @@
 import React from 'react'
 import People from './assets/peoplepng.png'
 import webBg from './assets/WebD4.jpg'
+import { motion } from "motion/react"
 
 const Hero = () => {
   return (
@@ -8,7 +9,12 @@ const Hero = () => {
 
     <div className='md:flex md:p-10 md:px-14'>
 
-      <div className=" font-extrabold md:p-10 p-5 md:text-[4vw] text-[9vw] mb-5">
+      <motion.div
+       initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+      viewport={{ amount: 0.3 }} // triggers only once when 30% visible
+       className=" font-extrabold md:p-10 p-5 md:text-[4vw] text-[9vw] mb-5">
         <h1 className=' text-[#0cf323]'>REDEFINE HOW</h1>
         <h1 className=' text-[#0cf323]'>YOU GROW YOUR</h1>
         <h1 className=' text-[#fff]'>DIGITAL BUSINESS</h1>
@@ -17,7 +23,7 @@ const Hero = () => {
           <h1> Revenue based funding and execution support designed for early stage founders</h1>
         </div>
 
-      </div>
+      </motion.div>
 
       <div className='  flex justify-center'>
         <img className=' md:h-[65vh] md:w-[80vh] -mt-10  md:mt-10 h-[70vw]' src={People} alt="" />
