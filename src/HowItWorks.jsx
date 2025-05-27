@@ -18,7 +18,7 @@ const HowItWorks = () => {
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      viewport={{ amount: 0.3 }} // animate every time it scrolls into view
+      viewport={{ amount: 0.2 }} // animate every time it scrolls into view
     className='c1 mr-[15vw] mt-10 flex justify-center  items-center gap-7 rounded-3xl p-4 bg-[#ddecfb] shadow-lg  m-4 md:w-[40vw]'>
       <div>
         <h1 className=' font-semibold text-[#434343]'>01</h1>

@@ -13,7 +13,7 @@ const Hero = () => {
        initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      viewport={{ amount: 0.3 }} // triggers only once when 30% visible
+      viewport={{ amount: 0.2 }} // triggers only once when 30% visible
        className=" font-extrabold md:p-10 p-5 md:text-[4vw] text-[9vw] mb-5">
         <h1 className=' text-[#0cf323]'>REDEFINE HOW</h1>
         <h1 className=' text-[#0cf323]'>YOU GROW YOUR</h1>
